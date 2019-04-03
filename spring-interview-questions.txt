@@ -1,0 +1,200 @@
+Ques. What is a Spring Framework?
+It is light-weighted and loosely coupled.
+It has layered architecture, which allows you to select the components to use, while also providing a cohesive framework for J2EE application development.
+Spring framework is also called the framework of frameworks as it provides support to various other frameworks such as Struts, Hibernate, Tapestry, EJB, JSF etc.
+
+Ques. List the advantages of Spring Framework.
+Because of Spring Frameworks layered architecture, you can use what you need and leave which you don’t.
+Spring Framework enables POJO (Plain Old Java Object) Programming which in turn enables continuous integration and testability.
+JDBC is simplified due to Dependency Injection and Inversion of Control.
+It is open-source and has no vendor lock-in.
+
+Ques. What are the different features of Spring Framework?
+Lightweight: Spring is lightweight when it comes to size and transparency. 
+Inversion of control (IOC): The objects give their dependencies instead of creating or looking for dependent objects. This is called Inversion Of Control.
+Aspect oriented Programming (AOP): Aspect oriented programming in Spring supports cohesive development by separating application business logic from system services.
+Container: Spring Framework creates and manages the life cycle and configuration of the application objects.
+MVC Framework: Spring Framework’s MVC web application framework is highly configurable. Other frameworks can also be used easily instead of Spring MVC Framework.
+JDBC Exception Handling: The JDBC abstraction layer of the Spring offers an exception hierarchy, which simplifies the error handling strategy.
+
+Ques. How many modules are there in Spring Framework and what are they?
+There are around 20 modules which are generalized into Core Container, Data Access/Integration, Web, AOP (Aspect Oriented Programming), Instrumentation and Test.Spring Framework Architecture 
+
+Spring Core Container – This layer is basically the core of Spring Framework. It contains the following modules :
+Spring Core
+Spring Bean
+SpEL (Spring Expression Language)
+Spring Context 
+
+Data Access/Integration – This layer provides support to interact with the database. It contains the following modules :
+JDBC (Java DataBase Connectivity)
+ORM (Object Relational Mapping)
+OXM (Object XML Mappers)
+
+JMS (Java Messaging Service)
+
+Transaction
+
+Web – This layer provides support to create web application. It contains the following modules :
+Web
+Web – MVC
+Web – Socket
+Web – Portlet
+
+
+Ques. What is a Spring configuration file? 
+A Spring configuration file is an XML file. This file mainly contains the classes information. It describes how those classes are configured as well as introduced to each other. The XML configuration files, however, are verbose and more clean. If it’s not planned and written correctly, it becomes very difficult to manage in big projects.
+
+
+Ques. What are the various ways of using Spring Framework?
+Spring Framework can be used in various ways. They are listed as follows:
+
+As a Full-fledged Spring web application.
+As a third-party web framework, using Spring Frameworks middle-tier.
+For remote usage. 
+As Enterprise Java Bean which can wrap existing POJOs (Plain Old Java Objects).
+
+
+
+Ques. What is Spring IOC Container?
+At the core of the Spring Framework, lies the Spring container. The container creates the object, wires them together, configures them and manages their complete life cycle. The Spring container makes use of Dependency Injection to manage the components that make up an application. The container receives instructions for which objects to instantiate, configure, and assemble by reading the configuration metadata provided. This metadata can be provided either by XML, Java annotations or Java code.
+
+Ques. What do you mean by Dependency Injection? 
+In Dependency Injection, you do not have to create your objects but have to describe how they should be created. You don’t connect your components and services together in the code directly, but describe which services are needed by which components in the configuration file. The IoC container will wire them up together.
+
+Ques. In how many ways can Dependency Injection be done?
+In general, dependency injection can be done in three ways, namely :
+
+Constructor Injection
+Setter Injection
+Interface Injection
+In Spring Framework, only constructor and setter injections are used.
+
+
+Ques. Differentiate between constructor injection and setter injection.
+Constructor Injection              
+There is no partial injection.	                 
+It doesn’t override the setter property.	       .
+It will create a new instance if any modification 
+is done.	                                                 
+It works better for many properties.                   
+		VS
+Setter Injection
+There can be partial injection.
+It overrides the constructor property.
+It will not create new instance if any modification is done.
+It works better for few properties.
+
+
+Ques. How many types of IOC containers are there in spring?
+BeanFactory: BeanFactory is like a factory class that contains a collection of beans. It instantiates the bean whenever asked for by clients.
+ApplicationContext: The ApplicationContext interface is built on top of the BeanFactory interface. It provides some extra functionality on top BeanFactory.
+
+
+Ques. Differentiate between BeanFactory and ApplicationContext.
+
+
+Ques.  List some of the benefits of IoC.
+Some of the benefits of IoC are:
+It will minimize the amount of code in your application.
+It will make your application easy to test because it doesn’t require any singletons or JNDI lookup mechanisms in your unit test cases.
+It promotes loose coupling with minimal effort and least intrusive mechanism.
+It supports eager instantiation and lazy loading of the services.
+
+Ques. Explain Spring Beans?
+They are the objects that form the backbone of the user’s application.
+Beans are managed by the Spring IoC container.
+They are instantiated, configured, wired and managed by a Spring IoC container
+
+Ques. How configuration metadata is provided to the Spring container?
+Configuration metadata can be provided to Spring container in following ways:
+
+XML-Based configuration: In Spring Framework, the dependencies and the services needed by beans are specified in configuration files which are in XML format. These configuration files usually contain a lot of bean definitions and application specific configuration options. They generally start with a bean tag. For example:
+<bean id="studentbean" class="org.edureka.firstSpring.StudentBean">
+ <property name="name" value="Edureka"></property>
+</bean>
+
+Annotation-Based configuration: Instead of using XML to describe a bean wiring, you can configure the bean into the component class itself by using annotations on the relevant class, method, or field declaration. By default, annotation wiring is not turned on in the Spring container. So, you need to enable it in your Spring configuration file before using it. 
+<beans>
+<context:annotation-config/>
+<!-- bean definitions go here -->
+</beans>
+
+Java-based configuration: The key features in Spring Framework’s new Java-configuration support are @Configuration annotated classes and @Bean annotated methods. 
+1. @Bean annotation plays the same role as the <bean/> element. 
+2.@Configuration classes allows to define inter-bean dependencies by simply calling other @Bean methods in the same class.
+
+
+
+Ques. How many bean scopes are supported by Spring?
+The Spring Framework supports five scopes. They are:
+Singleton: This provides scope for the bean definition to single instance per Spring IoC container.
+Prototype: This provides scope for a single bean definition to have any number of object instances.
+Request: This provides scope for a bean definition to an HTTP-request. 
+Session: This provides scope for a bean definition to an HTTP-session. 
+Global-session: This provides scope for a bean definition to an Global HTTP-session. 
+The last three are available only in WebApplicationContext.
+
+Ques. What is the Bean life cycle in Spring Bean Factory Container?
+
+Ques. Define Bean Wiring.
+When beans are combined together within the Spring container, it’s called wiring or bean wiring. The Spring container needs to know what beans are needed and how the container should use dependency injection to tie the beans together, while wiring beans.
+
+Ques What do you understand by auto wiring and name the different modes of it?
+The Spring container is able to autowire relationships between the collaborating beans. That is, it is possible to let Spring resolve collaborators for your bean automatically by inspecting the contents of the BeanFactory.
+Different modes of bean auto-wiring are:
+
+no: This is default setting which means no autowiring. Explicit bean reference should be used for wiring.
+byName: It injects the object dependency according to name of the bean. It matches and wires its properties with the 	beans defined by the same names in the XML file.
+byType: It injects the object dependency according to type. It matches and wires a property if its type matches with 	exactly one of the beans name in XML file.
+constructor: It injects the dependency by calling the constructor of the class. It has a large number of parameters.
+autodetect: First the container tries to wire using autowire by constructor, if it can’t then it tries to autowire by 	byType.
+
+
+Ques. What are the limitations with auto wiring?
+Following are some of the limitations you might face with auto wiring:
+Overriding possibility: You can always specify dependencies using <constructor-arg> and <property> settings which will override autowiring.
+Primitive data type: Simple properties such as primitives, Strings and Classes can’t be autowired.
+Confusing nature: Always prefer using explicit wiring because autowiring is less precise.
+
+
+Ques. What’s the difference between @Component, @Controller, @Repository & @Service annotations in Spring?
+@Component: This marks a java class as a bean. It is a generic stereotype for any Spring-managed component. The component-scanning mechanism of spring now can pick it up and pull it into the application context.
+@Controller: This marks a class as a Spring Web MVC controller. Beans marked with it are automatically imported into the Dependency Injection container.
+@Service: This annotation is a specialization of the component annotation. It doesn’t provide any additional behavior over the @Component annotation. You can use @Service over @Component in service-layer classes as it specifies intent in a better way.
+@Repository: This annotation is a specialization of the @Component annotation with similar use and functionality. It provides additional benefits specifically for DAOs. It imports the DAOs into the DI container and makes the unchecked exceptions eligible for translation into Spring DataAccessException.
+
+Ques. What do you understand by @Required annotation?
+@Required is applied to bean property setter methods. This annotation simply indicates that the affected bean property must be populated at the configuration time with the help of an explicit property value in a bean definition or with autowiring. If the affected bean property has not been populated, the container will throw BeanInitializationException.
+
+
+Ques. What do you understand by @Autowired annotation?
+The @Autowired annotation provides more accurate control over where and how autowiring should be done. This annotation is used to autowire bean on the setter methods, constructor, a property or methods with arbitrary names or multiple arguments. By default, it is a type driven injection.
+
+
+Ques. What do you understand by @Qualifier annotation?
+When you create more than one bean of the same type and want to wire only one of them with a property  you can use the @Qualifier annotation along with @Autowired to remove the ambiguity by specifying which exact bean should be wired.
+
+
+Ques.  What do you understand by @RequestMapping annotation?
+@RequestMapping annotation is used for mapping a particular HTTP request method to a specific class/ method in controller that will be handling the respective request. This annotation can be applied at both levels:
+Class level : Maps the URL of the request
+Method level: Maps the URL as well as HTTP request method
+
+
+Ques. Describe Spring DAO support?
+The Data Access Object (DAO) support in Spring makes it easy to work with data access technologies like JDBC, Hibernate or JDO in a consistent way. This allows one to switch between the persistence technologies easily. It also allows you to code without worrying about catching exceptions that are specific to each of these technology.
+
+
+Ques. What do you mean by Spring MVC framework?
+The Spring web MVC framework provides model-view-controller architecture and ready to use components that are used to develop flexible and loosely coupled web applications. The MVC pattern helps in separating the different aspects of the application like input logic, business logic and UI logic, while providing a loose coupling between all these elements.
+
+Ques. Describe DispatcherServlet.
+The DispatcherServlet is the core of Spring Web MVC framework. It handles all the HTTP requests and responses. The DispatcherServlet receives the entry of handler mapping from the configuration file and forwards the request to the controller. The controller then returns an object of Model And View. The DispatcherServlet checks the entry of view resolver in the configuration file and calls the specified view component.
+
+Ques. Explain WebApplicationContext.
+The WebApplicationContext is an extension of the plain ApplicationContext. It has some extra features that are necessary for web applications. It differs from a normal ApplicationContext in terms of its capability of resolving themes and in deciding which servlet it is associated with.
+
+Ques. In Spring MVC framework, what is controller?
+Controllers provide access to the application behavior. These behaviors are generally defined through a service interface. Controllers interpret the user input and transform it into a model which is represented to the user by the view. In Spring, controller is implemented in a very abstract way. It also enables you to create a wide variety of controllers.
+
