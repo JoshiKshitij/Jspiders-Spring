@@ -18,11 +18,13 @@
 
 	<!-- Computer com = new Computer -->
 	<bean id="com" class="com.spiders.si.Computer">
-	    <!-- com.setBrand("hp")  -->
-		<property name="brand" value="hp"></property>
-		
-		<!-- com.setPrice(60000.0)  -->
-		<!-- <property name="price" value="60000.0"></property> -->
+	
+	<!--   <constructor-arg name="brand"  value="apple" ></constructor-arg> -->
+	<!--   <constructor-arg type="String"   value="apple" ></constructor-arg> -->
+	<!--   <constructor-arg index="0"  value="apple" ></constructor-arg> -->
+	
+	  <constructor-arg value="apple" ></constructor-arg>
+	  <constructor-arg value="100000" ></constructor-arg>
 	</bean>
 
 
