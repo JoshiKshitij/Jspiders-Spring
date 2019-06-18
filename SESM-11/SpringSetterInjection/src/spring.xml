@@ -20,41 +20,6 @@
 	<bean id="com" class="com.spiders.mi.Computer">
 		<property name="brand" value="lenovo"></property>
 		<property name="price" value="234567"></property>
-		<property name="motherBoard" ref="mb"></property>
 	</bean>
-
-
-	<!-- MotherBoard mb = new MotherBoard() -->
-	<bean id="mb" class="com.spiders.mi.MotherBoard">
-		<property name="brand" value="lenovo mb"></property>
-	</bean>
-
-
-
-
-
-
-
-
-
-
-
-
-	<bean id="com1" class="com.spiders.mi.Computer">
-		<constructor-arg name="motherBoard" ref="mb1"></constructor-arg>
-		<constructor-arg name="brand" value="apple">
-		</constructor-arg>
-		<constructor-arg name="price" value="123455">
-		</constructor-arg>
-	</bean>
-
-	<!-- MotherBoard mb1 = new MotherBoard() -->
-	<bean id="mb1" class="com.spiders.mi.MotherBoard">
-		<property name="brand" value="apple mb"></property>
-	</bean>
-
-
-
-
 
 </beans> 

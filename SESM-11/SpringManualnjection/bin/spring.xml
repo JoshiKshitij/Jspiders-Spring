@@ -16,19 +16,33 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<bean id="com" class="com.spiders.si.Computer">
-
-
+	<!-- Computer com = new Computer() -->
+	<bean id="com" class="com.spiders.mi.Computer">
 		<property name="brand" value="lenovo"></property>
 		<property name="price" value="234567"></property>
-
-		<constructor-arg type="String" value="hp"></constructor-arg>
-		<constructor-arg type="double" value="3000"></constructor-arg>
-
-
-
-
-
+		<property name="motherBoard" ref="mb"></property>
 	</bean>
+
+
+	<!-- MotherBoard mb = new MotherBoard() -->
+	<bean id="mb" class="com.spiders.mi.MotherBoard">
+		<property name="brand" value="lenovo mb"></property>
+	</bean>
+
+
+	<bean id="com1" class="com.spiders.mi.Computer">
+		<constructor-arg name="motherBoard" ref="mb1"></constructor-arg>
+		<constructor-arg name="brand" value="apple">
+		</constructor-arg>
+		<constructor-arg name="price" value="123455">
+		</constructor-arg>
+	</bean>
+
+	<!-- MotherBoard mb1 = new MotherBoard() -->
+	<bean id="mb1" class="com.spiders.mi.MotherBoard">
+		<property name="brand" value="apple mb"></property>
+	</bean>
+
+
 
 </beans> 

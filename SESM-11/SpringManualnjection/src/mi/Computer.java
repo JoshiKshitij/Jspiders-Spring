@@ -1,18 +1,14 @@
-package com.spiders.si;
+package com.spiders.mi;
 
 public class Computer {
-	
-	// getter and setter
-	// default contructor()
-	// para contructor()
-	// toString also
 
+	MotherBoard motherBoard;
 	private String brand;
 	private double price;
 
 	@Override
 	public String toString() {
-		return "Computer [brand=" + brand + ", price=" + price + "]";
+		return "Computer [motherBoard=" + motherBoard + ", brand=" + brand + ", price=" + price + "]";
 	}
 	
 	public String getBrand() {
@@ -38,6 +34,21 @@ public class Computer {
 
 	public Computer(String brand, double price) {
 		super();
+		this.brand = brand;
+		this.price = price;
+	}
+
+	public MotherBoard getMotherBoard() {
+		return motherBoard;
+	}
+
+	public void setMotherBoard(MotherBoard motherBoard) {
+		this.motherBoard = motherBoard;
+	}
+
+	public Computer(MotherBoard motherBoard, String brand, double price) {
+		super();
+		this.motherBoard = motherBoard;
 		this.brand = brand;
 		this.price = price;
 	}

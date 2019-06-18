@@ -1,4 +1,4 @@
-package com.spiders.mi;
+package com.spiders.ci;
 
 import org.springframework.context.ApplicationContext;
 
@@ -14,8 +14,9 @@ public class Runner {
 		// at run time
 		ApplicationContext container = new ClassPathXmlApplicationContext("spring.xml");
 		
-		Computer computer = (Computer)container.getBean("com");
-		System.out.println(computer);
+		Galaxy milkyWay = container.getBean(Galaxy.class, "milkyWay");
+		System.out.println(milkyWay);
+		
 		
 		
 	}

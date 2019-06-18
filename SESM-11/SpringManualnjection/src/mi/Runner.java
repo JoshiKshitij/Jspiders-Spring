@@ -1,4 +1,4 @@
-package com.spiders.si;
+package com.spiders.mi;
 
 import org.springframework.context.ApplicationContext;
 
@@ -14,9 +14,8 @@ public class Runner {
 		// at run time
 		ApplicationContext container = new ClassPathXmlApplicationContext("spring.xml");
 		
-		Computer computer = container.getBean(Computer.class, "com");
+		Computer computer = (Computer)container.getBean("com");
 		System.out.println(computer);
-		
 		
 		
 	}
