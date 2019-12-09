@@ -20,20 +20,35 @@
 		<property name="name" value="Babu Rao"></property>
 		<property name="sons">
 			<list>
-				<ref bean= "babuChotaRao"></ref>
-				<ref bean= "babuUsseBeChotaRao"></ref>
+				<ref bean="babuChotaRao"></ref>
+				<ref bean="babuUsseBeChotaRao"></ref>
 			</list>
 
 		</property>
 	</bean>
 
 	<bean id="babuChotaRao" class="com.setterinjectioon.app.Son">
-		<property name="name" value="ChotaBabuRao"></property>
+		<property name="name" value="ChotaBabuRao">
+
+		</property>
 	</bean>
 
 	<bean id="babuUsseBeChotaRao" class="com.setterinjectioon.app.Son">
 		<property name="name" value="SabseChotaBabuRo"></property>
 	</bean>
+
+
+	<!-- 	<map>
+		Map<String , Son> map1 = new HashMap();
+		<entry key="basicDatatype" value-ref="Object"></entry>
+
+		Map<Son , Son> map2 = new HashMap();
+		<entry key-ref="Object" value-ref="Object"></entry>
+
+		Map<Son , String> map3 = new HashMap();
+		<entry key-ref="Objec" value="bsaciDataTyoe"></entry>
+	</map> -->
+
 
 
 

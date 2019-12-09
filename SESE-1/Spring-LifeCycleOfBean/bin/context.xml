@@ -17,8 +17,10 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<!-- Student s1 = new Student() -->
-	<bean id="s1" class="com.setterinjectioon.app.Student"
-		init-method="myInit" destroy-method="dummyDestory">
+	<bean id="s1"
+	 class="com.setterinjectioon.app.Student"
+		init-method="myInit"
+		 destroy-method="dummyDestory">
 
 	</bean>
 

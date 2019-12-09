@@ -11,7 +11,7 @@ public class Runner {
 		//Student ramWithList = container.getBean("s1", Student.class);
 		//System.out.println(ramWithList);
 		
-		Student ramcharnWithSet = container.getBean("s2", Student.class);
+		Student ramcharnWithSet = container.getBean("s3", Student.class);
 		System.out.println(ramcharnWithSet);
 	
 		

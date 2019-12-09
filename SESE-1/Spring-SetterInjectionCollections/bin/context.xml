@@ -32,7 +32,7 @@
 
 	</bean>
 
-<bean id="s2" class="com.setterinjectioon.app.Student">
+	<bean id="s2" class="com.setterinjectioon.app.Student">
 		<property name="rollNo" value="101"></property>
 		<property name="name" value="ramcharn"></property>
 		<property name="favNo">
@@ -42,14 +42,26 @@
 				<value>2</value>
 				<value>1</value>
 				<value>4</value>
-				<value>1</value>	
+				<value>1</value>
 			</set>
 		</property>
 
 	</bean>
 
+	<!-- map init -->
+	<bean id="s3" class="com.setterinjectioon.app.Student">
+		<property name="rollNo" value="101"></property>
+		<property name="name" value="ramcharn"></property>
+		<property name="bestFriends">
+			<map>
+				<entry key="1" value="ram"></entry>
+				<entry key="2" value="karam"></entry>
+				<entry key="3" value="arjun"></entry>
+				<entry key="1" value="nakul"></entry>
+			</map>
+		</property>
 
-
+	</bean>
 
 
 	<!-- <bean id="s2" class="com.setterinjectioon.app.Student"> <property name="rolNo"> 
