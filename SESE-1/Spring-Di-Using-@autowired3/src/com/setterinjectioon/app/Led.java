@@ -1,9 +1,8 @@
 package com.setterinjectioon.app;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component @Primary
+@Component
 public class Led implements Light {
 
 	public void lightOn() {

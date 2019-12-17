@@ -6,9 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Switch {
-
-	@Autowired
-	//@Qualifier("led")
+	
 	private Light light ;
 
 	public void switchOn() {
@@ -16,8 +14,12 @@ public class Switch {
 		light.lightOn();
 	}
 
-	public Switch() {
+	@Autowired
+	public Switch(@Qualifier("led") Light light) {
 		System.out.println("switch created");
+		this.light = light;
 	}
+	
+	
 
 }
