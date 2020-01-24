@@ -30,8 +30,4 @@
 		<property name="name" value="Joyti"></property>
 	</bean>
 
-	 <bean id="deepkia" class="com.spring.demo.Wife">
-		<property name="name" value="deepika"></property>
-	</bean> 
-
 </beans> 

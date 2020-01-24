@@ -16,18 +16,21 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
+
+		<!-- autowire="byName"  -->
+		<!-- it will llok for the ref of bean and matchs with the ref rest inside the class 
+				if ref matchs it will do the DI else will Di will not be done-->
 	<bean id="kamlesh" class="com.spring.demo.Husband"
-		autowire="byType">
+		autowire="byName" >
 		<property name="name" value="Kamlesh"></property>
 	</bean>
 	
-	<bean id="akash" class="com.spring.demo.Husband"
-		autowire="byType">
-		<property name="name" value="akash"></property>
-	</bean>
-
 	<bean id="joyti" class="com.spring.demo.Wife">
 		<property name="name" value="Joyti"></property>
 	</bean>
+
+	 <bean id="wife" class="com.spring.demo.Wife">
+		<property name="name" value="deepika"></property>
+	</bean> 
 
 </beans> 
