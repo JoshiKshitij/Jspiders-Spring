@@ -11,31 +11,25 @@ public class WelcomeController {
 	public WelcomeController() {
 		System.out.println("Welcome controller created");
 	}
-	
-	
+
 	@RequestMapping("/welcome")
-	public ModelAndView sayWelcome(){
-		
+	public ModelAndView sayWelcome() {
+
 		System.out.println("---  Welcome method called ---");
-		
+
 		return new ModelAndView("index.jsp");
 	}
-	
-	
+
 	@RequestMapping("/login")
-	public ModelAndView login(
-			@RequestParam String userName,
-			@RequestParam String password){
+	public ModelAndView login(@RequestParam String userName,
+			@RequestParam String password) {
+
+		ModelAndView mv = new ModelAndView("data.jsp");
+		mv.addObject("un", userName);
+		mv.addObject("pass", password);
 		
-		System.out.println("user name - > " +userName);
-		System.out.println("password - > " +password);
 		
-		return new ModelAndView("index.jsp");
+		return mv;
 	}
-	
-	
-	
-	
-	
 
 }
